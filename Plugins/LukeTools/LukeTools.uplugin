@@ -2,7 +2,7 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "ActorPlaceTool",
+	"FriendlyName": "LukeTools",
 	"Description": "A tool to assist with the placement of actors in a level",
 	"Category": "Other",
 	"CreatedBy": "Luke Jackson",
@@ -16,8 +16,13 @@
 	"Installed": false,
 	"Modules": [
 		{
+			"Name": "LukeToolMenu",
+			"Type": "Editor",
+			"LoadingPhase":  "Default"
+		},
+		{
 			"Name": "ActorPlaceTool",
-			"Type": "Runtime",
+			"Type": "Editor",
 			"LoadingPhase": "Default"
 		}
 	]
