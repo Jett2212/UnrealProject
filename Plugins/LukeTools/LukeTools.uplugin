@@ -18,12 +18,18 @@
 		{
 			"Name": "LukeToolMenu",
 			"Type": "Editor",
-			"LoadingPhase":  "Default"
+			"LoadingPhase": "Default"
 		},
 		{
 			"Name": "ActorPlaceTool",
 			"Type": "Editor",
 			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Randomisation",
+			"Enabled": true
 		}
 	]
 }

@@ -738,7 +738,7 @@ TSharedRef<SWidget> SActorPlaceToolView::CreateTypeSelectionEnumBox ()
 TSharedRef<SWidget> SActorPlaceToolView::CreateSpawnActorButton ()
 {
 	return SNew(SButton)
-	.Text(FText::FromString(TEXT("Spawn Actor")))
+	.Text(FText::FromString(TEXT("Spawn Actor Randomly")))
 	.OnClicked_Lambda([this]()
 	{
 		ToolModel->SpawnActors();

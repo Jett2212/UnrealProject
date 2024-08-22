@@ -9,18 +9,32 @@ class SActorPlaceToolView : public SCompoundWidget
 {
 	SLATE_BEGIN_ARGS(SActorPlaceToolView) {}
 
-	//SLATE_ARGUMENT(TArray<TSharedPtr <FAssetData> >, AssetsDataToStore)
 	SLATE_ARGUMENT(ActorPlaceToolModel*, InToolModel)
 
 	SLATE_END_ARGS()
 public:
+
+	SActorPlaceToolView();
+	~SActorPlaceToolView();
+
 	void Construct(const FArguments& InArgs);
 	void InitView();
-	void CreateToolBox();
-	//void Construct(const FArguments& InArgs, ActorPlaceToolModel* InToolModel);
-	//inline void SetToolModel(ActorPlaceToolModel* InToolModel) { ToolModel = InToolModel; }
-	//TestButtonPressed();
-
 
 	ActorPlaceToolModel* ToolModel { nullptr };
+
+private:
+	void CreateToolBox();
+	
+	TSharedRef<SWidget> CreateUniformPlacementBox();
+	TSharedRef<SWidget> CreateUniformRandomPlacement();
+
+	TSharedRef<SWidget> CreateTypeSelectionEnumBox();
+
+	TSharedRef<SWidget> CreateSpawnActorButton();
+	TSharedRef<SWidget> CreateSeedRow();
+
+	UEnum* RandomEnum {nullptr};
+
+	FSlateBrush BoxBackgroundColorBrush;
+	FSlateBrush SplitterBackgroundColorBrush;
 };
